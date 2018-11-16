@@ -1,3 +1,5 @@
+# Dockerfile for modified scipy-notebook container.
+# Brett Milash, CHPC, University of Utah.
 ARG BASE_CONTAINER=jupyter/scipy-notebook
 FROM $BASE_CONTAINER
 
@@ -22,4 +24,3 @@ conda install -c conda-forge nbgrade
 jupyter nbextension install --sys-prefix --py nbgrader --overwrite
 jupyter nbextension enable --sys-prefix --py nbgrader
 jupyter serverextension enable --sys-prefix --py nbgrader
-
