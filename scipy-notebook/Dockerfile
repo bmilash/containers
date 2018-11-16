@@ -9,9 +9,9 @@ USER root
 
 # Install scp, vi, man
 RUN apt-get update && \
-    apt-get install vim && \
-    apt-get install openssh-client && \
-    apt-get install man
+    apt-get install -y vim && \
+    apt-get install -y openssh-client && \
+    apt-get install -y man
 
 USER $NB_UID
 
