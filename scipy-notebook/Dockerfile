@@ -5,7 +5,7 @@ FROM $BASE_CONTAINER
 
 LABEL maintainer="Brett Milash <brett.milash@utah.edu>"
 
-USER ROOT
+USER root
 
 # Install scp, vi, man
 RUN apt-get install vim && \
