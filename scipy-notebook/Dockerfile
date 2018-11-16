@@ -15,12 +15,12 @@ RUN apt-get install vim && \
 USER $NB_UID
 
 # Install rise.
-RUN conda install -c conda-forge rise && \
+RUN conda install -c conda-forge -y rise && \
     jupyter-nbextension install rise --py --sys-prefix && \
     jupyter-nbextension enable rise --py --sys-prefix
 
 # Install nbgrader.
-RUN conda install -c conda-forge nbgrade && \
+RUN conda install -c conda-forge -y nbgrader && \
     jupyter nbextension install --sys-prefix --py nbgrader --overwrite && \
     jupyter nbextension enable --sys-prefix --py nbgrader && \
     jupyter serverextension enable --sys-prefix --py nbgrader
