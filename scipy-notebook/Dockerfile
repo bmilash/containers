@@ -8,8 +8,8 @@ LABEL maintainer="Brett Milash <brett.milash@utah.edu>"
 USER ROOT
 
 # Install scp, vi, man
-RUN apt-get install vim &&
-    apt-get install openssh-client &&
+RUN apt-get install vim && \
+    apt-get install openssh-client && \
     apt-get install man
 
 USER $NB_UID
